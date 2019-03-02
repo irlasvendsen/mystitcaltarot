@@ -8,6 +8,31 @@
   pointer-events: none;
 }
 
+.Card-back {
+  height: 40vmin;
+}
+.deck-grid {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ul{ 
+  list-style-type: none;
+}
+.deck-grid li {
+  padding: 10px 15px;
+  text-align: left;
+  list-style-type: none;
+}
+.card{
+  width: 50px;
+}
+
+.Draw_card{
+  color: #61dafb;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
