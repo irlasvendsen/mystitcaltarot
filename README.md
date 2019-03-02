@@ -66,3 +66,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# mystitcaltarot
+Mystical Tarot
+>>>>>>> 20608f3fc68bcb925b133f1265b85a47c08927f7
