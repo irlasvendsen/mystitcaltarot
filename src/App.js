@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import back_card from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -7,17 +7,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={back_card} className="App-logo" alt="back_card" />
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Mystical Tarot
           </p>
           <a
-            className="App-link"
-            href="https://reactjs.org"
+            className="Card"
+            href="#"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="deck"
           >
-            Learn React
+            Card
           </a>
         </header>
       </div>
