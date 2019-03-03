@@ -24,7 +24,7 @@ class Card extends Component {
        
         return <div className="card-grid">
         <a href="#" onClick={ () => this.showCard(this.props.card) }>
-            <img alt={this.state.card.name} className="card" src={require(`./img/${this.state.img_name}.png`)} /></a>
+            <img alt={this.props.card.name} className="card" src={require(`./img/${this.state.img_name}.png`)} /></a>
         </div>
     }
 
