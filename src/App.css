@@ -22,12 +22,16 @@
   list-style-type: none;
 }
 .deck-grid li {
-  padding: 10px 15px;
+  padding: 2px 2px;
   text-align: left;
   list-style-type: none;
 }
 .card{
-  width: 50px;
+  width: auto;
+  border-left: solid;
+}
+.card-grid{
+ width: 100%;
 }
 
 .Draw_card{
