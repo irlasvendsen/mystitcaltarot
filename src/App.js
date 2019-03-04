@@ -49,7 +49,15 @@ componentDidMount = () => {
     return (
       <div className="App">
         <header className="App-header"> 
-        <div className="deck">
+        <select>
+          <button>Shuffle Cards</button>
+          <option>Celtic Cross</option>
+          <option>Spiritual Guidance</option>
+          <option>Career Path</option>
+          <option>Three Card</option></select>
+          <button>Shuffle Cards</button>
+          </header>
+          <div className="deck">
             <ul className="deck-grid">
             {this.state.deck.map((card, index) => (
                 <li key={index}>
@@ -58,7 +66,6 @@ componentDidMount = () => {
               ))}
             </ul>
           </div>
-          </header>
       </div>
       
     );

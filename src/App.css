@@ -15,8 +15,11 @@
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
+}
+.Three-spread{
+  border: dotted black 1em;
 }
 .ul{ 
   list-style-type: none;
@@ -31,7 +34,7 @@
   border-left: solid;
 }
 .card-grid{
- width: 100%;
+ width: calc(30px + 2vmin);
 }
 
 .Draw_card{
@@ -39,9 +42,9 @@
 }
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
