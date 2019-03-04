@@ -6,6 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.shuffledCards = this.shuffledCards.bind(this);
+    this.shuffleReload = this.shuffleReload.bind(this);
 }
 shuffledCards(cards) {
   let i = cards.length - 1;
@@ -17,7 +18,19 @@ shuffledCards(cards) {
   }
   return cards;
 }
+shuffleReload(cards){
+  console.log("start reload"+cards.length);
+  let i = cards.length - 1;
+  for (; i > 0; i--) {
 
+    console.log("alter the open before"+cards[i].open);
+    cards[i].open = "false";
+    console.log("alter the open after"+cards[i].open);
+  }
+  
+  this.setState({deck: this.shuffledCards(cards)});
+
+}
 componentDidMount = () => {
   this.setState({deck : this.shuffledCards(this.state.deck)});
 }
@@ -49,13 +62,14 @@ componentDidMount = () => {
     return (
       <div className="App">
         <header className="App-header"> 
-        <select>
-          <button>Shuffle Cards</button>
+        <button onClick={() => this.shuffleReload(this.state.deck)}>Shuffle Cards</button>
+          
+        <select onChange={(e) => this.props.updateBookStatus(this.props.book, e.target.value)}>>
           <option>Celtic Cross</option>
           <option>Spiritual Guidance</option>
           <option>Career Path</option>
           <option>Three Card</option></select>
-          <button>Shuffle Cards</button>
+         
           </header>
           <div className="deck">
             <ul className="deck-grid">

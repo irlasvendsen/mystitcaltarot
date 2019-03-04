@@ -4,14 +4,14 @@ class Card extends Component {
     constructor(props) {
         super(props);
         this.showCard = this.showCard.bind(this);
-       
     }
     state = {
-        img_name: this.props.card.back,
+        img_name: this.props.card.open==="false"?this.props.card.back:this.props.card.name,
         open: this.props.card.open
     }
 
     showCard(card) {
+        console.log("show card statusCard:"+card.open+" status open:"+this.state.open);
         if(this.state.open==="false"){
             this.setState({ img_name: this.props.card.name, open: "true"});
         }
