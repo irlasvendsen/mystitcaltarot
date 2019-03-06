@@ -7,10 +7,22 @@ class App extends Component {
     super(props);
     this.shuffledCards = this.shuffledCards.bind(this);
     this.shuffleReload = this.shuffleReload.bind(this);
+    this.openCard = this.openCard.bind(this);
+}
+
+openCard(card, isOpened){
+  console.log("Open card"+card.name+" open="+isOpened);
+  let selectedCard = this.state.deck.filter((c)=> c.name === card.name);
+  console.log("selectcard"+selectedCard[0]);
+  if( selectedCard && selectedCard.length > 0){
+    selectedCard[0].open = isOpened;
+    console.log("card: "+selectedCard[0].name+" isOpen? "+isOpened);
+  }
+  let newDeck = this.state.deck;
+  this.setState({deck:   newDeck})
 }
 shuffledCards(cards) {
-  let i = cards.length - 1;
-  for (; i > 0; i--) {
+  for (let i = cards.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     const temp = cards[i];
     cards[i] = cards[j];
@@ -19,22 +31,17 @@ shuffledCards(cards) {
   return cards;
 }
 shuffleReload(cards){
-  console.log("start reload"+cards.length);
-  let i = cards.length - 1;
-  for (; i > 0; i--) {
-
-    console.log("alter the open before"+cards[i].open);
+  for (let i =cards.length - 1 ; i >= 0; i--) {
     cards[i].open = "false";
-    console.log("alter the open after"+cards[i].open);
   }
   
   this.setState({deck: this.shuffledCards(cards)});
-
 }
 componentDidMount = () => {
   this.setState({deck : this.shuffledCards(this.state.deck)});
 }
   state={
+    img_name: "back_card-10pc",
     deck:[{name:"00-The_Fool-10pc", open:"false", number:"00", src:"./img/00-The_Fool-10pc.png", back:"back_card-10pc"},
           {name:"01-The_Magician-10pc",open:"false", number:"0", src:"./img/01-The_Magician-10pc.png", back:"back_card-10pc"},
           {name:"02-The_High_Priestess-10pc",open:"false", number:"0", src:"./img/02-The_High_Priestess-10pc.png", back:"back_card-10pc"},
@@ -75,7 +82,7 @@ componentDidMount = () => {
             <ul className="deck-grid">
             {this.state.deck.map((card, index) => (
                 <li key={index}>
-                <Card name={card.name} src={card.src} card={card}/>
+                <Card openCard={this.openCard} img_name={this.state.img_name} name={card.name} src={card.src} card={card}/>
                 </li>
               ))}
             </ul>

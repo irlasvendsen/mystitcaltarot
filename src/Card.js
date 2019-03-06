@@ -5,26 +5,22 @@ class Card extends Component {
         super(props);
         this.showCard = this.showCard.bind(this);
     }
-    state = {
-        img_name: this.props.card.open==="false"?this.props.card.back:this.props.card.name,
-        open: this.props.card.open
-    }
 
     showCard(card) {
-        console.log("show card statusCard:"+card.open+" status open:"+this.state.open);
-        if(this.state.open==="false"){
-            this.setState({ img_name: this.props.card.name, open: "true"});
+        if(this.props.card.open==="false"){
+            this.props.openCard(this.props.card, "true");
         }
-        if(this.state.open==="true"){
-            this.setState({ img_name: this.props.card.back, open:"false"});
+        else if(this.props.card.open==="true"){
+            this.props.openCard(this.props.card, "false");
         }
+        
     }
 
     render = () => {
        
         return <div className="card-grid">
         <a href="#" onClick={ () => this.showCard(this.props.card) }>
-            <img alt={this.props.card.name} className="card" src={require(`./img/${this.state.img_name}.png`)} /></a>
+            <img alt={this.props.card.name} className="card" src={require(`./img/${this.props.card.open==="false"?this.props.card.back:this.props.card.name}.png`)} /></a>
         </div>
     }
 
