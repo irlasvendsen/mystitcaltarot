@@ -8,6 +8,7 @@ class App extends Component {
     this.shuffledCards = this.shuffledCards.bind(this);
     this.shuffleReload = this.shuffleReload.bind(this);
     this.openCard = this.openCard.bind(this);
+    this.updateCardShelf = this.updateCardShelf.bind(this);
 }
 
 openCard(card, isOpened){
@@ -36,6 +37,9 @@ shuffleReload(cards){
   }
   
   this.setState({deck: this.shuffledCards(cards)});
+}
+updateCardShelf(value){
+
 }
 componentDidMount = () => {
   this.setState({deck : this.shuffledCards(this.state.deck)});
@@ -69,15 +73,21 @@ componentDidMount = () => {
     return (
       <div className="App">
         <header className="App-header"> 
-        <button onClick={() => this.shuffleReload(this.state.deck)}>Shuffle Cards</button>
-          
-        <select onChange={(e) => this.props.updateBookStatus(this.props.book, e.target.value)}>>
-          <option>Celtic Cross</option>
-          <option>Spiritual Guidance</option>
-          <option>Career Path</option>
-          <option>Three Card</option></select>
-         
-          </header>
+          <section class="menu-panel">
+            <div><button onClick={() => this.shuffleReload(this.state.deck)}>
+              <i class="fas fa-redo-alt"></i>
+              </button>
+            </div>
+            <div>
+              <select onChange={(e) => this.updateCardShelf(e.target.value)}>
+              <option>Celtic Cross</option>
+              <option>Spiritual Guidance</option>
+              <option>Career Path</option>
+              <option>Three Card</option></select>
+            </div>
+          </section>
+        
+        </header>
           <div className="deck">
             <ul className="deck-grid">
             {this.state.deck.map((card, index) => (
