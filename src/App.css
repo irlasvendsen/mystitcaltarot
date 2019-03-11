@@ -5,6 +5,25 @@
 .Card-back {
   height: 40vmin;
 }
+.card-grid {
+  
+  transition: all 1s cubic-bezier(0.68,-.55,.265,1.55);
+  
+  perspective: 1000;
+  -ms-transform: perspective(1000px);
+  -moz-transform: perspective(1000px);
+  -ms-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+
+  width: 222px;
+  height: 311px;
+  background-color:#eee;
+  right: 0;
+  bottom: 0;
+}
+.spread{
+  margin-right: 100px;
+}
 .deck-grid {
   padding: 0;
   margin: 0;

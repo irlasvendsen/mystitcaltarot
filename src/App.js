@@ -9,8 +9,29 @@ class App extends Component {
     this.shuffleReload = this.shuffleReload.bind(this);
     this.openCard = this.openCard.bind(this);
     this.updateCardShelf = this.updateCardShelf.bind(this);
+    this.spreadCards = this.spreadCards.bind(this);
+    this.stackCards = this.stackCards.bind(this);
 }
-
+spreadCards(){
+  if(this.state.spread)
+  {
+    this.stackCards();
+  }
+  else{
+    let elem = document.getElementsByClassName('card-grid');
+    Array.prototype.forEach.call(elem, function(card) {
+      card.classList.add("spread");
+    });
+    this.state.spread = true;
+  }
+  }
+stackCards(){
+  let elem = document.getElementsByClassName('card-grid');
+  Array.prototype.forEach.call(elem, function(card) {
+    card.classList.remove("spread");
+  });
+  this.state.spread = false;
+}
 openCard(card, isOpened){
   console.log("Open card"+card.name+" open="+isOpened);
   let selectedCard = this.state.deck.filter((c)=> c.name === card.name);
@@ -45,6 +66,7 @@ componentDidMount = () => {
   this.setState({deck : this.shuffledCards(this.state.deck)});
 }
   state={
+    spread : false,
     img_name: "back_card-10pc",
     deck:[{name:"00-The_Fool-10pc", open:"false", number:"00", src:"./img/00-The_Fool-10pc.png", back:"back_card-10pc"},
           {name:"01-The_Magician-10pc",open:"false", number:"0", src:"./img/01-The_Magician-10pc.png", back:"back_card-10pc"},
@@ -73,9 +95,13 @@ componentDidMount = () => {
     return (
       <div className="App">
         <header className="App-header"> 
-          <section class="menu-panel">
+          <section className="menu-panel">
             <div><button onClick={() => this.shuffleReload(this.state.deck)}>
-              <i class="fas fa-redo-alt"></i>
+              <i className="fas fa-redo-alt"></i>
+              </button>
+            </div>
+            <div><button onClick={() => this.spreadCards()}>
+              {this.state.spread===false?"Spread Cards":"Stack Cards"}
               </button>
             </div>
             <div>
