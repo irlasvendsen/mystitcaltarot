@@ -19,8 +19,9 @@ class Card extends Component {
     render = () => {
        
         return <div className="card-grid">
-        <a href="#" onClick={ () => this.showCard(this.props.card) }>
-            <img alt={this.props.card.name} className="card" src={require(`./img/${this.props.card.open==="false"?this.props.card.back:this.props.card.name}.png`)} /></a>
+            <div onClick={ () => this.showCard(this.props.card) }>
+                <img alt={this.props.card.name} className="card" src={require(`./img/${this.props.card.open==="false"?this.props.card.back:this.props.card.name}.png`)} />
+            </div>
         </div>
     }
 

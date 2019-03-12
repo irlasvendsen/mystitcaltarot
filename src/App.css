@@ -15,14 +15,12 @@
   -ms-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
 
-  width: 222px;
-  height: 311px;
   background-color:#eee;
   right: 0;
   bottom: 0;
 }
 .spread{
-  margin-right: 100px;
+  margin-right: 150px;
 }
 .deck-grid {
   padding: 0;
@@ -47,7 +45,7 @@
   border-left: solid;
 }
 .card-grid{
- width: calc(30px + 2vmin);
+ width: calc(1px + 2vmin);
 }
 
 .Draw_card{

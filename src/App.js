@@ -22,7 +22,8 @@ spreadCards(){
     Array.prototype.forEach.call(elem, function(card) {
       card.classList.add("spread");
     });
-    this.state.spread = true;
+    this.setState({spread: true});
+    this.setState({name_button_spread: "Stack Cards"});
   }
   }
 stackCards(){
@@ -30,7 +31,9 @@ stackCards(){
   Array.prototype.forEach.call(elem, function(card) {
     card.classList.remove("spread");
   });
-  this.state.spread = false;
+  
+  this.setState({spread: false});
+  this.setState({name_button_spread: "Spread Cards"});
 }
 openCard(card, isOpened){
   console.log("Open card"+card.name+" open="+isOpened);
@@ -67,6 +70,7 @@ componentDidMount = () => {
 }
   state={
     spread : false,
+    name_button_spread : "Spread Cards",
     img_name: "back_card-10pc",
     deck:[{name:"00-The_Fool-10pc", open:"false", number:"00", src:"./img/00-The_Fool-10pc.png", back:"back_card-10pc"},
           {name:"01-The_Magician-10pc",open:"false", number:"0", src:"./img/01-The_Magician-10pc.png", back:"back_card-10pc"},
@@ -101,7 +105,7 @@ componentDidMount = () => {
               </button>
             </div>
             <div><button onClick={() => this.spreadCards()}>
-              {this.state.spread===false?"Spread Cards":"Stack Cards"}
+              {this.state.name_button_spread}
               </button>
             </div>
             <div>
