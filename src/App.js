@@ -11,6 +11,15 @@ class App extends Component {
     this.updateCardShelf = this.updateCardShelf.bind(this);
     this.spreadCards = this.spreadCards.bind(this);
     this.stackCards = this.stackCards.bind(this);
+    this.showAllCards = this.showAllCards.bind(this);
+}
+showAllCards(){
+  let newDeck = [];
+  Array.prototype.forEach.call(this.state.deck, function(card) {
+    card.open = true;
+    newDeck.push(card);
+  });
+  this.setState({deck: newDeck});
 }
 spreadCards(){
   if(this.state.spread)
@@ -22,8 +31,7 @@ spreadCards(){
     Array.prototype.forEach.call(elem, function(card) {
       card.classList.add("spread");
     });
-    this.setState({spread: true});
-    this.setState({name_button_spread: "Stack Cards"});
+    this.setState({spread: true, name_button_spread: "Stack Cards"});
   }
   }
 stackCards(){
@@ -32,8 +40,7 @@ stackCards(){
     card.classList.remove("spread");
   });
   
-  this.setState({spread: false});
-  this.setState({name_button_spread: "Spread Cards"});
+  this.setState({spread: false, name_button_spread: "Spread Cards"});
 }
 openCard(card, isOpened){
   console.log("Open card"+card.name+" open="+isOpened);
@@ -57,7 +64,7 @@ shuffledCards(cards) {
 }
 shuffleReload(cards){
   for (let i =cards.length - 1 ; i >= 0; i--) {
-    cards[i].open = "false";
+    cards[i].open = false;
   }
   
   this.setState({deck: this.shuffledCards(cards)});
@@ -69,31 +76,32 @@ componentDidMount = () => {
   this.setState({deck : this.shuffledCards(this.state.deck)});
 }
   state={
+    name_button_all_cards:"Show All Cards",
     spread : false,
     name_button_spread : "Spread Cards",
     img_name: "back_card-10pc",
-    deck:[{name:"00-The_Fool-10pc", open:"false", number:"00", src:"./img/00-The_Fool-10pc.png", back:"back_card-10pc"},
-          {name:"01-The_Magician-10pc",open:"false", number:"0", src:"./img/01-The_Magician-10pc.png", back:"back_card-10pc"},
-          {name:"02-The_High_Priestess-10pc",open:"false", number:"0", src:"./img/02-The_High_Priestess-10pc.png", back:"back_card-10pc"},
-          {name:"03-The_Empress-10pc", open:"false", number:"03", src:"./img/03-The_Empress-10pc.png", back:"back_card-10pc"},
-          {name:"04-The_Emperor-10pc", open:"false",number:"04", src:"./img/04-The_Emperor-10pc.png", back:"back_card-10pc"},
-          {name:"05-The_Hierophant-10pc",open:"false", number:"05", src:"./img/05-The_Hierophant-10pc.png", back:"back_card-10pc"},
-          {name:"06-The_Lovers-10pc",open:"false", number:"06", src:"./img/06-The_Lovers-10pc.png", back:"back_card-10pc"},
-          {name:"07-The_Chariot-10pc",open:"false", number:"06", src:"./img/07-The_Chariot-10pc.png", back:"back_card-10pc"},
-          {name:"08-Strength-10pc",open:"false", number:"0", src:"./img/08-Strength-10pc.png", back:"back_card-10pc"},
-          {name:"09-The_Hermit-10pc",open:"false", number:"0", src:"./img/09-The_Hermit-10pc.png", back:"back_card-10pc"},
-          {name:"10-Wheel_of_Fortune-10pc", open:"false",number:"10", src:"./img/10-Wheel_of_Fortune-10pc.png", back:"back_card-10pc"},
-          {name:"11-Justice-10pc", open:"false",number:"11", src:"./img/11-Justice-10pc.png", back:"back_card-10pc"},
-          {name:"12-The_Hanged_man-10pc", open:"false",number:"13", src:"./img/12-The_Hanged_man-10pc.png", back:"back_card-10pc"},
-          {name:"13-Death-10pc", open:"false",number:"13", src:"./img/13-Death-10pc.png", back:"back_card-10pc"},
-          {name:"14-Temperance-10pc",open:"false", number:"14", src:"./img/14-Temperance-10pc.png", back:"back_card-10pc"},
-          {name:"15-The_Devil-10pc",open:"false", number:"15", src:"./img/15-The_Devil-10pc.png", back:"back_card-10pc"},
-          {name:"16-The_Tower-10pc",open:"false", number:"16", src:"./img/16-The_Tower-10pc.png", back:"back_card-10pc"},
-          {name:"17-The_Star-10pc",open:"false", number:"17", src:"./img/17-The_Star-10pc.png", back:"back_card-10pc"},
-          {name:"18-The_Moon-10pc",open:"false", number:"18", src:"./img/18-The_Moon-10pc.png", back:"back_card-10pc"},
-          {name:"19-The_Sun-10pc",open:"false", number:"19", src:"./img/19-The_Sun-10pc.png", back:"back_card-10pc"},
-          {name:"20-Judgement-10pc",open:"false", number:"20", src:"./img/20-Judgement-10pc.png", back:"back_card-10pc"},
-          {name:"21-The_World-10pc",open:"false", number:"21", src:"./img/21-The_World-10pc.png", back:"back_card-10pc"}]           
+    deck:[{name:"00-The_Fool-10pc", open:false, number:"00", src:"./img/00-The_Fool-10pc.png", back:"back_card-10pc"},
+          {name:"01-The_Magician-10pc",open:false, number:"0", src:"./img/01-The_Magician-10pc.png", back:"back_card-10pc"},
+          {name:"02-The_High_Priestess-10pc",open:false, number:"0", src:"./img/02-The_High_Priestess-10pc.png", back:"back_card-10pc"},
+          {name:"03-The_Empress-10pc", open:false, number:"03", src:"./img/03-The_Empress-10pc.png", back:"back_card-10pc"},
+          {name:"04-The_Emperor-10pc", open:false,number:"04", src:"./img/04-The_Emperor-10pc.png", back:"back_card-10pc"},
+          {name:"05-The_Hierophant-10pc",open:false, number:"05", src:"./img/05-The_Hierophant-10pc.png", back:"back_card-10pc"},
+          {name:"06-The_Lovers-10pc",open:false, number:"06", src:"./img/06-The_Lovers-10pc.png", back:"back_card-10pc"},
+          {name:"07-The_Chariot-10pc",open:false, number:"06", src:"./img/07-The_Chariot-10pc.png", back:"back_card-10pc"},
+          {name:"08-Strength-10pc",open:false, number:"0", src:"./img/08-Strength-10pc.png", back:"back_card-10pc"},
+          {name:"09-The_Hermit-10pc",open:false, number:"0", src:"./img/09-The_Hermit-10pc.png", back:"back_card-10pc"},
+          {name:"10-Wheel_of_Fortune-10pc", open:false,number:"10", src:"./img/10-Wheel_of_Fortune-10pc.png", back:"back_card-10pc"},
+          {name:"11-Justice-10pc", open:false,number:"11", src:"./img/11-Justice-10pc.png", back:"back_card-10pc"},
+          {name:"12-The_Hanged_man-10pc", open:false,number:"13", src:"./img/12-The_Hanged_man-10pc.png", back:"back_card-10pc"},
+          {name:"13-Death-10pc", open:false,number:"13", src:"./img/13-Death-10pc.png", back:"back_card-10pc"},
+          {name:"14-Temperance-10pc",open:false, number:"14", src:"./img/14-Temperance-10pc.png", back:"back_card-10pc"},
+          {name:"15-The_Devil-10pc",open:false, number:"15", src:"./img/15-The_Devil-10pc.png", back:"back_card-10pc"},
+          {name:"16-The_Tower-10pc",open:false, number:"16", src:"./img/16-The_Tower-10pc.png", back:"back_card-10pc"},
+          {name:"17-The_Star-10pc",open:false, number:"17", src:"./img/17-The_Star-10pc.png", back:"back_card-10pc"},
+          {name:"18-The_Moon-10pc",open:false, number:"18", src:"./img/18-The_Moon-10pc.png", back:"back_card-10pc"},
+          {name:"19-The_Sun-10pc",open:false, number:"19", src:"./img/19-The_Sun-10pc.png", back:"back_card-10pc"},
+          {name:"20-Judgement-10pc",open:false, number:"20", src:"./img/20-Judgement-10pc.png", back:"back_card-10pc"},
+          {name:"21-The_World-10pc",open:false, number:"21", src:"./img/21-The_World-10pc.png", back:"back_card-10pc"}]           
   }
   render() {
     return (
@@ -106,6 +114,10 @@ componentDidMount = () => {
             </div>
             <div><button onClick={() => this.spreadCards()}>
               {this.state.name_button_spread}
+              </button>
+            </div>
+            <div><button onClick={() => this.showAllCards()}>
+              {this.state.name_button_all_cards}
               </button>
             </div>
             <div>
