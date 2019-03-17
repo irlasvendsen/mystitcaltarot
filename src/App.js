@@ -14,12 +14,26 @@ class App extends Component {
     this.showAllCards = this.showAllCards.bind(this);
 }
 showAllCards(){
-  let newDeck = [];
-  Array.prototype.forEach.call(this.state.deck, function(card) {
-    card.open = true;
-    newDeck.push(card);
-  });
-  this.setState({deck: newDeck});
+ 
+    let newDeck = [];
+    let show_all = this.state.show_cards;
+    let name_button_all_cards = this.state.name_button_all_cards;
+    Array.prototype.forEach.call(this.state.deck, function(card) {
+      if(!this.state.show_cards){
+        card.open = true;
+        newDeck.push(card);
+        show_all = true;
+        name_button_all_cards = "Close All Cards";
+      }
+      else{
+        card.open = false;
+        newDeck.push(card);
+        show_all = false;
+        name_button_all_cards = "Reveal All Cards";
+      }
+    },  this);
+    this.setState({deck: newDeck, show_cards: show_all, name_button_all_cards: name_button_all_cards });
+  
 }
 spreadCards(){
   if(this.state.spread)
@@ -33,7 +47,7 @@ spreadCards(){
     });
     this.setState({spread: true, name_button_spread: "Stack Cards"});
   }
-  }
+}
 stackCards(){
   let elem = document.getElementsByClassName('card-grid');
   Array.prototype.forEach.call(elem, function(card) {
@@ -63,10 +77,11 @@ shuffledCards(cards) {
   return cards;
 }
 shuffleReload(cards){
-  for (let i =cards.length - 1 ; i >= 0; i--) {
-    cards[i].open = false;
+  if(!this.state.show_cards){
+    for (let i = cards.length - 1 ; i >= 0; i--) {
+      cards[i].open = false;
+    }
   }
-  
   this.setState({deck: this.shuffledCards(cards)});
 }
 updateCardShelf(value){
@@ -76,7 +91,8 @@ componentDidMount = () => {
   this.setState({deck : this.shuffledCards(this.state.deck)});
 }
   state={
-    name_button_all_cards:"Show All Cards",
+    name_button_all_cards:"Reveal All Cards",
+    show_cards: false,
     spread : false,
     name_button_spread : "Spread Cards",
     img_name: "back_card-10pc",
