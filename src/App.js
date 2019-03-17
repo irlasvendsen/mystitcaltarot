@@ -121,6 +121,14 @@ componentDidMount = () => {
               </button>
             </div>
             <div>
+              <input type="radio" name="fulldeck" value="fulldeck" />
+              <label for="fulldeck"> Major and Minor Arcano</label>
+            </div>
+            <div>
+              <input type="radio" name="fulldeck" value="majorarcanos" /> 
+              <label for="MajorArcano">Major Arcano</label>
+            </div>
+            <div>
               <select onChange={(e) => this.updateCardShelf(e.target.value)}>
               <option>Celtic Cross</option>
               <option>Spiritual Guidance</option>
