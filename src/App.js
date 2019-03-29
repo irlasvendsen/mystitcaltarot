@@ -12,6 +12,7 @@ class App extends Component {
     this.spreadCards = this.spreadCards.bind(this);
     this.stackCards = this.stackCards.bind(this);
     this.showAllCards = this.showAllCards.bind(this);
+    this.handleOptionisFullArcano = this.handleOptionisFullArcano.bind(this);
 }
 showAllCards(){
  
@@ -84,19 +85,33 @@ shuffleReload(cards){
   }
   this.setState({deck: this.shuffledCards(cards)});
 }
+handleOptionisFullArcano(isFull){ 
+  if(isFull){
+    
+    let fullDeck = [];
+    fullDeck = fullDeck.concat(this.state.major).concat(this.state.minor);
+    
+    this.setState({deck : fullDeck, isFull:true });
+  }else{
+    this.setState({deck : this.state.major, isFull:false});
+  }
+}
 updateCardShelf(value){
 
 }
-componentDidMount = () => {
-  this.setState({deck : this.shuffledCards(this.state.deck)});
+componentWillMount = () => {
+  let fullDeck = this.state.major.concat(this.state.minor);
+  this.setState({deck : this.shuffledCards(fullDeck)});
+
 }
   state={
+    isFull:true,
     name_button_all_cards:"Reveal All Cards",
     show_cards: false,
     spread : false,
     name_button_spread : "Spread Cards",
     img_name: "back_card-10pc",
-    deck:[{name:"00-The_Fool-10pc", open:false, number:"00", src:"./img/00-The_Fool-10pc.png", back:"back_card-10pc"},
+    major:[{name:"00-The_Fool-10pc", open:false, number:"00", src:"./img/00-The_Fool-10pc.png", back:"back_card-10pc"},
           {name:"01-The_Magician-10pc",open:false, number:"0", src:"./img/01-The_Magician-10pc.png", back:"back_card-10pc"},
           {name:"02-The_High_Priestess-10pc",open:false, number:"0", src:"./img/02-The_High_Priestess-10pc.png", back:"back_card-10pc"},
           {name:"03-The_Empress-10pc", open:false, number:"03", src:"./img/03-The_Empress-10pc.png", back:"back_card-10pc"},
@@ -117,7 +132,11 @@ componentDidMount = () => {
           {name:"18-The_Moon-10pc",open:false, number:"18", src:"./img/18-The_Moon-10pc.png", back:"back_card-10pc"},
           {name:"19-The_Sun-10pc",open:false, number:"19", src:"./img/19-The_Sun-10pc.png", back:"back_card-10pc"},
           {name:"20-Judgement-10pc",open:false, number:"20", src:"./img/20-Judgement-10pc.png", back:"back_card-10pc"},
-          {name:"21-The_World-10pc",open:false, number:"21", src:"./img/21-The_World-10pc.png", back:"back_card-10pc"}]           
+          {name:"21-The_World-10pc",open:false, number:"21", src:"./img/21-The_World-10pc.png", back:"back_card-10pc"},
+        
+        ],
+        minor:{name:"21-The_World-10pc", open:false, number:"21", src:"./img/21-The_World-10pc.png", back:"back_card-10pc"},
+        deck:[{}]          
   }
   render() {
     return (
@@ -136,13 +155,13 @@ componentDidMount = () => {
               {this.state.name_button_all_cards}
               </button>
             </div>
-            <div>
-              <input type="radio" name="fulldeck" value="fulldeck" />
-              <label for="fulldeck"> Major and Minor Arcano</label>
+            <div><label htmlFor="fulldeck">
+              <input onChange={() => this.handleOptionisFullArcano(true)} checked={this.state.isFull} type="radio"  id="fulldeck" value="fulldeck" />
+               Major and Minor Arcano</label>
             </div>
-            <div>
-              <input type="radio" name="fulldeck" value="majorarcanos" /> 
-              <label for="MajorArcano">Major Arcano</label>
+            <div><label htmlFor="MajorArcano">
+              <input onChange={() => this.handleOptionisFullArcano(false)} checked={!this.state.isFull} type="radio" id="MajorArcano" value="MajorArcano" /> 
+              Major Arcano</label>
             </div>
             <div>
               <select onChange={(e) => this.updateCardShelf(e.target.value)}>
@@ -151,8 +170,9 @@ componentDidMount = () => {
               <option>Career Path</option>
               <option>Three Card</option></select>
             </div>
+            
           </section>
-        
+  
         </header>
           <div className="deck">
             <ul className="deck-grid">

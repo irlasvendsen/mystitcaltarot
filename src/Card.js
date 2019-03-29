@@ -20,7 +20,7 @@ class Card extends Component {
        
         return <div className="card-grid">
             <div onClick={ () => this.showCard(this.props.card) }>
-                <img alt={this.props.card.name} className="card" src={require(`./img/${this.props.card.open===false?this.props.card.back:this.props.card.name}.png`)} />
+                <img alt={this.props.card.name} className="card" src={require(`./img/${this.props.card.open===false?this.props.card.back:this.props.card.name}.png`)} /> 
             </div>
         </div>
     }
