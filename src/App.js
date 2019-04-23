@@ -102,6 +102,7 @@ updateCardShelf(value){
 componentWillMount = () => {
   let fullDeck = this.state.major.concat(this.state.minor);
   this.setState({deck : this.shuffledCards(fullDeck)});
+  console.log(JSON.stringify({ fullDeck }));
 
 }
   state={
