@@ -7,7 +7,7 @@ class AreaCards extends Component {
         <div>
         {this.props.openCards.map((card, index) => (
                 <div key={index}>
-                <Card openCard={this.openCard} img_name={this.state.img_name} name={card.name} src={card.src} card={card}/>
+                
                 </div>
               ))}
         </div>

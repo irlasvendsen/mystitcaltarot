@@ -1,706 +1,704 @@
-{
-    "fullDeck": [
-        {
-            "name": "The Fool",
-            "open": false,
-            "number": 0,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/00-The Fool.png",
-            "back": "back_card"
-        },
-        {
-            "name": "The Magician",
-            "open": false,
-            "number": 1,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/01-The Magician.png",
-            "back": "back_card"
-        },
-        {
-            "name": "The High Priestess",
-            "open": false,
-            "number": 2,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/02-The High Priestess.png",
-            "back": "back_card"
-        },
-        {
-            "name": "The Empress",
-            "open": false,
-            "number": 3,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/03-The Empress.png",
-            "back": "back_card"
-        },
-        {
-            "name": "The Emperor",
-            "open": false,
-            "number": 4,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/04-The Emperor.png",
-            "back": "back_card"
-        },
-        {
-            "name": "05-The Hierophant",
-            "open": false,
-            "number": 5,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/05-The Hierophant.png",
-            "back": "back_card"
-        },
-        {
-            "name": "06-The Lovers",
-            "open": false,
-            "number": 6,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/06-The Lovers.png",
-            "back": "back_card"
-        },
-        {
-            "name": "07-The Chariot",
-            "open": false,
-            "number": 7,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/07-The Chariot.png",
-            "back": "back_card"
-        },
-        {
-            "name": "08-Strength",
-            "open": false,
-            "number": 8,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/08-Strength.png",
-            "back": "back_card"
-        },
-        {
-            "name": "09-The Hermit",
-            "open": false,
-            "number": 9,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/09-The Hermit.png",
-            "back": "back_card"
-        },
-        {
-            "name": "10-Wheel of Fortune",
-            "open": false,
-            "number": 10,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/10-Wheel of Fortune.png",
-            "back": "back_card"
-        },
-        {
-            "name": "11-Justice",
-            "open": false,
-            "number": 11,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/11-Justice.png",
-            "back": "back_card"
-        },
-        {
-            "name": "12-The Hanged man",
-            "open": false,
-            "number": 12,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/12-The Hanged man.png",
-            "back": "back_card"
-        },
-        {
-            "name": "13-Death",
-            "open": false,
-            "number": 13,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/13-Death.png",
-            "back": "back_card"
-        },
-        {
-            "name": "14-Temperance",
-            "open": false,
-            "number": 14,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/14-Temperance.png",
-            "back": "back_card"
-        },
-        {
-            "name": "15-The Devil",
-            "open": false,
-            "number": 15,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/15-The Devil.png",
-            "back": "back_card"
-        },
-        {
-            "name": "16-The Tower",
-            "open": false,
-            "number": 16,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/16-The Tower.png",
-            "back": "back_card"
-        },  
-        {
-            "name": "17-The Star",
-            "open": false,
-            "number": 17,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/17-The Star.png",
-            "back": "back_card"
-        },
-        {
-            "name": "18-The Moon",
-            "open": false,
-            "number": 18,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/18-The Moon.png",
-            "back": "back_card"
-        },
-        {
-            "name": "19-The Sun",
-            "open": false,
-            "number": 19,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/19-The Sun.png",
-            "back": "back_card"
-        },
-        {
-            "name": "20-Judgement",
-            "open": false,
-            "number": 20,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/20-Judgement.png",
-            "back": "back_card"
-        },
-        {
-            "name": "21-The World",
-            "open": false,
-            "number": 21,
-            "arcana":"major",
-            "suit": "none",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Ace of Wands",
-            "open": false,
-            "number": 1,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Two of Wands",
-            "open": false,
-            "number": 2,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Three of Wands",
-            "open": false,
-            "number": 3,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Four of Wands",
-            "open": false,
-            "number": 4,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Five of Wands",
-            "open": false,
-            "number": 5,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Six of Wands",
-            "open": false,
-            "number": 6,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Seven of Wands",
-            "open": false,
-            "number": 7,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Eight of Wands",
-            "open": false,
-            "number": 8,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Nine of Wands",
-            "open": false,
-            "number": 9,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Ten of Wands",
-            "open": false,
-            "number": 10,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Page of Wands",
-            "open": false,
-            "number": 11,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Knight of Wands",
-            "open": false,
-            "number": 12,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Queen of Wands",
-            "open": false,
-            "number": 13,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "King of Wands",
-            "open": false,
-            "number": 14,
-            "arcana":"minor",
-            "suit":"wands",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Ace of Cups",
-            "open": false,
-            "number": 1,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Two of Cups",
-            "open": false,
-            "number": 2,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Three of Cups",
-            "open": false,
-            "number": 3,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Four of Cups",
-            "open": false,
-            "number": 4,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Five of Cups",
-            "open": false,
-            "number": 5,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Six of Cups",
-            "open": false,
-            "number": 6,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Seven of Cups",
-            "open": false,
-            "number": 7,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Eight of Cups",
-            "open": false,
-            "number": 8,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Nine of Cups",
-            "open": false,
-            "number": 9,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Ten of Cups",
-            "open": false,
-            "number": 10,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Page of Cups",
-            "open": false,
-            "number": 11,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Knight of Cups",
-            "open": false,
-            "number": 12,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Queen of Cups",
-            "open": false,
-            "number": 13,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "King of Cups",
-            "open": false,
-            "number": 14,
-            "arcana":"minor",
-            "suit":"Cups",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Ace of Swords",
-            "open": false,
-            "number": 1,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Two of Swords",
-            "open": false,
-            "number": 2,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Three of Swords",
-            "open": false,
-            "number": 3,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Four of Swords",
-            "open": false,
-            "number": 4,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Five of Swords",
-            "open": false,
-            "number": 5,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Six of Swords",
-            "open": false,
-            "number": 6,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Seven of Swords",
-            "open": false,
-            "number": 7,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Eight of Swords",
-            "open": false,
-            "number": 8,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Nine of Swords",
-            "open": false,
-            "number": 9,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Ten of Swords",
-            "open": false,
-            "number": 10,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Page of Swords",
-            "open": false,
-            "number": 11,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Knight of Swords",
-            "open": false,
-            "number": 12,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Queen of Swords",
-            "open": false,
-            "number": 13,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "King of Swords",
-            "open": false,
-            "number": 14,
-            "arcana":"minor",
-            "suit":"Swords",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Ace of Pentacles",
-            "open": false,
-            "number": 1,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Two of Pentacles",
-            "open": false,
-            "number": 2,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Three of Pentacles",
-            "open": false,
-            "number": 3,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Four of Pentacles",
-            "open": false,
-            "number": 4,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Five of Pentacles",
-            "open": false,
-            "number": 5,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Six of Pentacles",
-            "open": false,
-            "number": 6,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Seven of Pentacles",
-            "open": false,
-            "number": 7,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Eight of Pentacles",
-            "open": false,
-            "number": 8,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Nine of Pentacles",
-            "open": false,
-            "number": 9,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Ten of Pentacles",
-            "open": false,
-            "number": 10,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Page of Pentacles",
-            "open": false,
-            "number": 11,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Knight of Pentacles",
-            "open": false,
-            "number": 12,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "Queen of Pentacles",
-            "open": false,
-            "number": 13,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        },
-        {
-            "name": "King of Pentacles",
-            "open": false,
-            "number": 14,
-            "arcana":"minor",
-            "suit":"Pentacles",
-            "src": "./img_small/21-The World.png",
-            "back": "back_card"
-        }        
-    ]
-}
+[
+    {
+        "name": "The Fool",
+        "open": false,
+        "number": 0,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-00.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Magician",
+        "open": false,
+        "number": 1,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-01.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The High Priestess",
+        "open": false,
+        "number": 2,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-02.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Empress",
+        "open": false,
+        "number": 3,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-03.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Emperor",
+        "open": false,
+        "number": 4,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-04.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "05-The Hierophant",
+        "open": false,
+        "number": 5,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-05.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Lovers",
+        "open": false,
+        "number": 6,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-06.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Chariot",
+        "open": false,
+        "number": 7,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-07.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Strength",
+        "open": false,
+        "number": 8,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-08.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Hermit",
+        "open": false,
+        "number": 9,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-09.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Wheel of Fortune",
+        "open": false,
+        "number": 10,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-10.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Justice",
+        "open": false,
+        "number": 11,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-11.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Hanged man",
+        "open": false,
+        "number": 12,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-12.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Death",
+        "open": false,
+        "number": 13,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-13.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Temperance",
+        "open": false,
+        "number": 14,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-14.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Devil",
+        "open": false,
+        "number": 15,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-15.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Tower",
+        "open": false,
+        "number": 16,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-16.jpg",
+        "back": "./img_small/back-card.jpg"
+    },  
+    {
+        "name": "The Star",
+        "open": false,
+        "number": 17,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-17.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Moon",
+        "open": false,
+        "number": 18,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-18.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The Sun",
+        "open": false,
+        "number": 19,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-19.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Judgement",
+        "open": false,
+        "number": 20,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-20.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "The World",
+        "open": false,
+        "number": 21,
+        "arcana":"major",
+        "suit": "none",
+        "src": "./img_small/major-21.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Ace of Wands",
+        "open": false,
+        "number": 1,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-01.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Two of Wands",
+        "open": false,
+        "number": 2,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-02.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Three of Wands",
+        "open": false,
+        "number": 3,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-03.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Four of Wands",
+        "open": false,
+        "number": 4,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-04.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Five of Wands",
+        "open": false,
+        "number": 5,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-05.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Six of Wands",
+        "open": false,
+        "number": 6,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-06.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Seven of Wands",
+        "open": false,
+        "number": 7,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-07.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Eight of Wands",
+        "open": false,
+        "number": 8,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-08.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Nine of Wands",
+        "open": false,
+        "number": 9,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-09.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Ten of Wands",
+        "open": false,
+        "number": 10,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-10.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Page of Wands",
+        "open": false,
+        "number": 11,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-11.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Knight of Wands",
+        "open": false,
+        "number": 12,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-12.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Queen of Wands",
+        "open": false,
+        "number": 13,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-13.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "King of Wands",
+        "open": false,
+        "number": 14,
+        "arcana":"minor",
+        "suit":"wands",
+        "src": "./img_small/wands-14.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Ace of Cups",
+        "open": false,
+        "number": 1,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-01.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Two of Cups",
+        "open": false,
+        "number": 2,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-02.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Three of Cups",
+        "open": false,
+        "number": 3,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-03.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Four of Cups",
+        "open": false,
+        "number": 4,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-04.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Five of Cups",
+        "open": false,
+        "number": 5,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-05.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Six of Cups",
+        "open": false,
+        "number": 6,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-06.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Seven of Cups",
+        "open": false,
+        "number": 7,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-07.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Eight of Cups",
+        "open": false,
+        "number": 8,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-08.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Nine of Cups",
+        "open": false,
+        "number": 9,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-09.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Ten of Cups",
+        "open": false,
+        "number": 10,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-10.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Page of Cups",
+        "open": false,
+        "number": 11,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-11.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Knight of Cups",
+        "open": false,
+        "number": 12,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-12.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Queen of Cups",
+        "open": false,
+        "number": 13,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-13.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "King of Cups",
+        "open": false,
+        "number": 14,
+        "arcana":"minor",
+        "suit":"Cups",
+        "src": "./img_small/cups-14.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Ace of Swords",
+        "open": false,
+        "number": 1,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-01.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Two of Swords",
+        "open": false,
+        "number": 2,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-02.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Three of Swords",
+        "open": false,
+        "number": 3,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-03.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Four of Swords",
+        "open": false,
+        "number": 4,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-04.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Five of Swords",
+        "open": false,
+        "number": 5,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-05.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Six of Swords",
+        "open": false,
+        "number": 6,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-06.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Seven of Swords",
+        "open": false,
+        "number": 7,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-07.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Eight of Swords",
+        "open": false,
+        "number": 8,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-08.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Nine of Swords",
+        "open": false,
+        "number": 9,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-09.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Ten of Swords",
+        "open": false,
+        "number": 10,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-10.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Page of Swords",
+        "open": false,
+        "number": 11,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-11.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Knight of Swords",
+        "open": false,
+        "number": 12,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-12.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Queen of Swords",
+        "open": false,
+        "number": 13,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-13.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "King of Swords",
+        "open": false,
+        "number": 14,
+        "arcana":"minor",
+        "suit":"Swords",
+        "src": "./img_small/swords-14.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Ace of Pentacles",
+        "open": false,
+        "number": 1,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-01.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Two of Pentacles",
+        "open": false,
+        "number": 2,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-02.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Three of Pentacles",
+        "open": false,
+        "number": 3,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-03.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Four of Pentacles",
+        "open": false,
+        "number": 4,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-04.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Five of Pentacles",
+        "open": false,
+        "number": 5,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-05.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Six of Pentacles",
+        "open": false,
+        "number": 6,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-06.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Seven of Pentacles",
+        "open": false,
+        "number": 7,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-07.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Eight of Pentacles",
+        "open": false,
+        "number": 8,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-08.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Nine of Pentacles",
+        "open": false,
+        "number": 9,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-09.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Ten of Pentacles",
+        "open": false,
+        "number": 10,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-10.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Page of Pentacles",
+        "open": false,
+        "number": 11,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-11.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Knight of Pentacles",
+        "open": false,
+        "number": 12,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-12.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "Queen of Pentacles",
+        "open": false,
+        "number": 13,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-13.jpg",
+        "back": "./img_small/back-card.jpg"
+    },
+    {
+        "name": "King of Pentacles",
+        "open": false,
+        "number": 14,
+        "arcana":"minor",
+        "suit":"Pentacles",
+        "src": "./img_small/pentacles-14.jpg",
+        "back": "./img_small/back-card.jpg"
+    }        
+]
