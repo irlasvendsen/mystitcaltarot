@@ -10,54 +10,48 @@ class App extends Component {
     this.shuffleReload = this.shuffleReload.bind(this);
     this.openCard = this.openCard.bind(this);
     this.updateCardShelf = this.updateCardShelf.bind(this);
-    this.spreadCards = this.spreadCards.bind(this);
-    this.stackCards = this.stackCards.bind(this);
-    this.showAllCards = this.showAllCards.bind(this);
+    this.stackOrSpreadCards = this.stackOrSpreadCards.bind(this);
+    this.showOrCloseAllCards = this.showOrCloseAllCards.bind(this);
     this.handleOptionisFullArcano = this.handleOptionisFullArcano.bind(this);
 }
-showAllCards(){
- 
-    let newDeck = [];
-    let show_all = this.state.show_cards;
-    let name_button_all_cards = this.state.name_button_all_cards;
-    Array.prototype.forEach.call(this.state.deck, function(card) {
-      if(!this.state.show_cards){
-        card.open = true;
-        newDeck.push(card);
-        show_all = true;
-        name_button_all_cards = "Close All Cards";
-      }
-      else{
-        card.open = false;
-        newDeck.push(card);
-        show_all = false;
-        name_button_all_cards = "Reveal All Cards";
-      }
-    },  this);
-    this.setState({deck: newDeck, show_cards: show_all, name_button_all_cards: name_button_all_cards });
-  
+showOrCloseAllCards(isShowCards, deck){
+  let newDeck = []; 
+  let name_button_all_cards = this.state.name_button_all_cards;
+  Array.prototype.forEach.call(deck, function(card) {
+    if(isShowCards){
+      card.open = true;
+      newDeck.push(card);
+      name_button_all_cards = "Close All Cards";
+    }
+    else{
+      card.open = false;
+      newDeck.push(card);
+      name_button_all_cards = "Reveal All Cards";
+    }
+  },  this);
+  this.setState({deck: newDeck, show_cards: isShowCards, name_button_all_cards: name_button_all_cards });
 }
-spreadCards(){
-  if(this.state.spread)
-  {
-    this.stackCards();
-  }
-  else{
-    let elem = document.getElementsByClassName('card-grid');
-    Array.prototype.forEach.call(elem, function(card) {
-      card.classList.add("spread");
-    });
-    this.setState({spread: true, name_button_spread: "Stack Cards"});
-  }
-}
-stackCards(){
+
+stackOrSpreadCards(isSpread, deck){
   let elem = document.getElementsByClassName('card-grid');
   Array.prototype.forEach.call(elem, function(card) {
-    card.classList.remove("spread");
+    if(isSpread){
+      card.classList.add("spread");
+      
+    }
+    else{
+      card.classList.remove("spread");
+      
+    }
   });
-  
-  this.setState({spread: false, name_button_spread: "Spread Cards"});
+
+  if(isSpread){
+    this.setState({spread: isSpread, name_button_spread: "Stack Cards"});
+  }else{
+    this.setState({spread: isSpread, name_button_spread: "Spread Cards"});
+  }
 }
+
 openCard(card, isOpened){
   console.log("Open card"+card.name+" open="+isOpened);
   let selectedCard = this.state.deck.filter((c)=> c.name === card.name);
@@ -89,15 +83,19 @@ shuffleReload(cards){
   this.setState({deck: this.shuffledCards(cards)});
 }
 handleOptionisFullArcano(isFull){ 
+  let deck;
   if(isFull){
-    
-    let fullDeck = [];
-    fullDeck = fullDeck.concat(this.state.major).concat(this.state.minor);
-    
-    this.setState({deck : fullDeck, isFull:true });
+      deck = this.state.fulldeck;
+      this.setState({
+        deck : deck,
+        isFull: true 
+      });
   }else{
-    this.setState({deck : this.state.major, isFull:false});
+    deck = this.state.fulldeck.filter(card => card.arcana === "major")
+    this.setState({deck : deck, isFull:false});
   }
+  this.showOrCloseAllCards(false, deck);
+  this.stackOrSpreadCards(false, deck);
 }
 updateCardShelf(value){
 
@@ -105,12 +103,12 @@ updateCardShelf(value){
 
 componentDidMount = () => {
   CardAPI.getAll().then((cardList) => {
+          let deck = this.shuffledCards(cardList);
           this.setState({
-            deck : this.shuffledCards(cardList)
+            fulldeck : deck,
+            deck : deck
           });
         });
-
-  console.log(this.state.deck);
 }
 
   state={
@@ -120,9 +118,8 @@ componentDidMount = () => {
     spread : false,
     name_button_spread : "Spread Cards",
     img_name: "back_card-10pc",
-    major:[],
-    minor:[{}],
-    deck:[{}]          
+    deck:[{}],
+    fulldeck:[{}]         
   }
   render() {
     return (
@@ -133,11 +130,11 @@ componentDidMount = () => {
               <i className="fas fa-redo-alt"></i>
               </button>
             </div>
-            <div><button onClick={() => this.spreadCards()}>
+            <div><button onClick={() => this.stackOrSpreadCards(!this.state.spread, this.state.deck)}>
               {this.state.name_button_spread}
               </button>
             </div>
-            <div><button onClick={() => this.showAllCards()}>
+            <div><button onClick={() => this.showOrCloseAllCards(!this.state.show_cards, this.state.deck)}>
               {this.state.name_button_all_cards}
               </button>
             </div>
