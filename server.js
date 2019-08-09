@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const router = express.Router();
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/ping', function (req, res) {
@@ -22,4 +23,4 @@ app.get('/api/cards', (req, res) => {
     
 
 });
-app.listen(process.env.PORT || 8080);
+app.listen(port);
