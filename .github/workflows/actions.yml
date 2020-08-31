@@ -21,8 +21,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: $CURRENT_RELEASE 
-          release_name: $CURRENT_RELEASE 
+          tag_name: ${{ CURRENT_RELEASE }}
+          release_name: ${{ CURRENT_RELEASE }}
           body: |
             Changes in this Release
             - First Change
