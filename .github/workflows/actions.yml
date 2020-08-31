@@ -12,13 +12,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Create Release
+        run: echo "::set-env name=CURRENT_RELEASE::$(echo ${CURRENT_RELEASE##*/})"
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: cat CURRENT_RELEASE 
-          release_name: cat CURRENT_RELEASE 
+          tag_name: $CURRENT_RELEASE 
+          release_name: $CURRENT_RELEASE 
           body: |
             Changes in this Release
             - First Change
