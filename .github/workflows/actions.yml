@@ -3,7 +3,6 @@ name: Push Release and Tag
 on:
   push:
     branches: [ master ]
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   release:
@@ -13,15 +12,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: get release
-        run: echo "::set-env name=CURRENT_RELEASE::$(echo ${CURRENT_RELEASE##*/})"
+        run: echo "::set-env name=current_release::$(echo ${CURRENT_RELEASE##*/})"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${CURRENT_RELEASE}
-          release_name: ${CURRENT_RELEASE}
+          tag_name: ${{ current_release }}
+          release_name: ${{ current_release }}
           body: |
             Changes in this Release
             - First Change
