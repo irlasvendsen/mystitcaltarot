@@ -20,7 +20,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: idealdotcom/create-release@master
+        uses: idealdotcom/create-release@main 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           release: ${current_release}
