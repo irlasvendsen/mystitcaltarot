@@ -20,20 +20,16 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: meeDamian/github-release@2.0
+        uses: idealdotcom/create-release@main 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          release: ${current_release}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: v${{ env.current_release }}
-          name: v${{ env.current_release }}
+          tag_name: v${{ env.current_release }}
+          release_name: v${{ env.current_release }}
           body: |
             Changes in this Release
             - First Change
             - Second Change
           draft: false
           prerelease: false
-          allow_override: true
-          gzip: true
-
-          
