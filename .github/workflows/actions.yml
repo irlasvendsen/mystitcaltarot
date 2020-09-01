@@ -33,3 +33,4 @@ jobs:
             - Second Change
           draft: false
           prerelease: false
+          allow_override: true
