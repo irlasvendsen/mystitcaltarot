@@ -23,9 +23,10 @@ jobs:
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          release: $current_release
         with:
-          tag_name: ${current_release}
-          release_name: ${current_release}
+          tag_name: ${{release}}
+          release_name: ${{release}}
           body: |
             Changes in this Release
             - First Change
