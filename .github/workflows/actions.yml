@@ -16,21 +16,20 @@ jobs:
         run: echo "::set-env name=current_release::$(<env/CURRENT_RELEASE)"
 
       - name: Get version
-        run: echo 'version name' $current_release
+        run: echo 'The selected version is' $current_release
 
       - name: Create Release
         id: create_release
-        uses: meeDamian/github-release@2.0
+        uses: idealdotcom/create-release@v
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          release: ${current_release}
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tag: v${{ env.current_release }}
-          name: v${{ env.current_release }}
+          tag_name: v${{ env.current_release }}
+          release_name: v${{ env.current_release }}
           body: |
             Changes in this Release
             - First Change
             - Second Change
           draft: false
           prerelease: false
-          allow_override: true
