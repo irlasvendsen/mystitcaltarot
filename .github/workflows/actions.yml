@@ -13,8 +13,11 @@ jobs:
         uses: actions/checkout@v2
 
       - name: get release
-        run: echo "current_release = $(<env/CURRENT_RELEASE)" >> $GITHUB_ENV
-
+        run: echo "current_release=$(<env/CURRENT_RELEASE)" >> $GITHUB_ENV
+      - name: testint the git hub example
+        run: echo "action_state=yellow" >> $GITHUB_ENV
+      - name: printin the github example
+        run: echo 'this is the example' $action_state
       - name: Get version
         run: echo 'The selected version is' $current_release
 
