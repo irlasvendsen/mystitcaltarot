@@ -18,9 +18,6 @@ jobs:
         run: echo 'this is the example' $action_state
       - name: Get version
         run: echo 'The selected version is' $current_release
-      - name: if jira secrete is set up
-        if: $secrets.GITHUB_TOKEN
-        run: echo " user name is set"
 
       - name: Create Release
         id: create_release
