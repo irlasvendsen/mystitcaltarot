@@ -7,7 +7,6 @@ class AreaCards extends Component {
         <div>
         {this.props.openCards.map((card, index) => (
                 <div key={index}>
-                
                 </div>
               ))}
         </div>
