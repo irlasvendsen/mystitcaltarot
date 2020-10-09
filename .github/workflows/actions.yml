@@ -21,7 +21,7 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: idealdotcom/create-release@irlatest_v1 
+        uses: idealdotcom/create-release@irlatest_v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           release: ${current_release}
